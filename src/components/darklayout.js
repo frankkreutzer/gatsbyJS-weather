@@ -49,6 +49,9 @@ export default ({ children }) => (
 {/*    <Link to="/">Home </Link> */}
     <h3><ul>
       <li><h3>Currently Summary: {data.weatherData.currently.summary}</h3></li> 
+      <li><h3>Currently Time: {data.weatherData.currently.time}</h3></li>
+      <li><h3>Currently Temperature: {data.weatherData.currently.temperature}</h3></li>
+      <li><h3>Currently Apparent Temperature: {data.weatherData.currently.apparentTemperature}</h3></li>
       <li><h3>cloudCover: {data.weatherData.currently.cloudCover}</h3></li> 
       <li><h3>latitude: {data.weatherData.latitude}</h3></li>
       <li><h3>longitude: {data.weatherData.longitude}</h3></li>

@@ -18,11 +18,10 @@ export default ({ children }) => (
         lat
       
       }
-      weather {
-        id
-        main
-        description
-        icon
+      main {
+        temp
+        pressure
+        humidity
       }
       dt
       wind {
@@ -44,6 +43,8 @@ export default ({ children }) => (
             <li><h3>City Name: {data.openWeather.name}</h3></li>
             <li><h3>City Coord lat: {data.openWeather.coord.lat}</h3></li>
             <li><h3>City Coord lon: {data.openWeather.coord.lon}</h3></li>
+            <li><h3>dt: {data.openWeather.dt}</h3></li>
+            <li><h3>Temperature: {data.openWeather.main.temp}</h3></li>
      </ul></h3> 
 	
   </div>
