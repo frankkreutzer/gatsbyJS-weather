@@ -1,10 +1,27 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Weather - DarkSky and OpenWeather`,
-  /*  pathPrefix: '/static-gatsby-weather',*/
+    /*  pathPrefix: '/static-gatsby-weather',*/
   },
   plugins: [
- {
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "GatsbyJS-weather",
+        short_name: "GatsbyJS-weather",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: "standalone",
+        icon: "./static/favicon.ico", // This path is relative to the root of the site.
+      },
+    },
+
+    'gatsby-plugin-offline',
+
+    {
       resolve: 'gatsby-source-openweathermap',
       options: {
         apikey: '504b868212eef251b7a3a88708220b57',
@@ -13,7 +30,7 @@ module.exports = {
         type: 'weather'
       },
     },
-  
+
     {
       resolve: 'gatsby-source-darksky',
       options: {
@@ -22,7 +39,7 @@ module.exports = {
         longitude: '-87.74',
         exclude: ['minutely']
       },
-    } 
-    
+    },
+
   ]
 }
