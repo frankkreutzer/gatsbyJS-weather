@@ -8,7 +8,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "GatsbyJS Weather App",
-        short_name: "GatsbyJS-weather",
+        short_name: "weather-app",
         start_url: "/",
         background_color: "#4CAF50",
         theme_color: "#4CAF50",
