@@ -22,7 +22,7 @@ Adjusted instructions for draft gatsy-starter-weather
 
     ```sh
     # create a new Gatsby site using the hello-world starter
-    npx gatsby new my-weather-starter https://github.com/jdebettencourt/gatsby-starter-weather
+    npx gatsby new my-weather-starter https://github.com/frankkreutzer/gatsbyJS-weather
     ```
 
 1.  **Start developing.**
@@ -31,7 +31,7 @@ Adjusted instructions for draft gatsy-starter-weather
 
     ```sh
     cd my-weather-starter/
-    gatsby develop --host=0.0.0.0 --port=3000
+    npx gatsby develop
     ```
 
 1.  **Open the source code and start editing!**
