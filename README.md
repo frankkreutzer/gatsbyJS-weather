@@ -22,7 +22,7 @@ Adjusted instructions for draft gatsy-starter-weather
 
     ```sh
     # create a new Gatsby site using the hello-world starter
-    npx gatsby new my-weather-starter https://github.com/jdebettencourt/gatsby-starter-weather
+    npx gatsby new my-weather-starter https://github.com/frankkreutzer/gatsbyJS-weather
     ```
 
 1.  **Start developing.**
@@ -31,7 +31,7 @@ Adjusted instructions for draft gatsy-starter-weather
 
     ```sh
     cd my-weather-starter/
-    gatsby develop --host=0.0.0.0 --port=3000
+    npx gatsby develop
     ```
 
 1.  **Open the source code and start editing!**
@@ -41,6 +41,27 @@ Adjusted instructions for draft gatsy-starter-weather
     _Note: You'll also see a second link: _`https://0.0.0.0:3000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
     Open the `my-weather-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    
+1.  **Build Production Site with Surge.sh**
+
+    Use the CLI to create a production site on Surge:
+    ```sh
+    npm install --global surge
+
+    #Then create a (free) account with them
+    surge
+    ```
+    
+    Build your site:
+    ```sh
+    npx gatsby build
+    ```
+    
+    Deploy your site by publishing the generated files to surge.sh:
+    ```sh
+    surge public/
+    ```
+
 
 ## 🧐 What's inside?
  ---*** below not yet updated for draft gatsby-starter-weather  ***--- jsdeb 2-14-19
