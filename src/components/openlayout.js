@@ -12,42 +12,50 @@ export default ({ children }) => (
     <StaticQuery
     query={graphql`
       query {
-    openWeather{
-      coord{
-        lon
-        lat
-      
-      }
-      main {
-        temp
-        pressure
-        humidity
-      }
-      dt
-      wind {
-        speed
-        deg
-      }
-      name
-    }
-  }`
+        openWeather {
+          coord {
+            lon
+            lat
+          }
+          visibility
+          main {
+            temp
+            pressure
+            humidity
+          }
+          dt
+          wind {
+            speed
+            deg
+          }
+          name
+        }
+      }`
 }
-    render={data => (
-  <div>
-        <Link to="/" style={{ float: `right`}}>
-      Home
-    </Link>
+  render={data => (
+  <div id="main">
+    <Link to="/" style={{ float: `right`}}>Home</Link>
     {children}
         {/* <Link to="/">Home    </Link>  */}
-     <h3><ul>
-            <li><h3>City Name: {data.openWeather.name}</h3></li>
-            <li><h3>City Coord lat: {data.openWeather.coord.lat}</h3></li>
-            <li><h3>City Coord lon: {data.openWeather.coord.lon}</h3></li>
-            <li><h3>dt: {data.openWeather.dt}</h3></li>
-            <li><h3>Temperature: {data.openWeather.main.temp}</h3></li>
-     </ul></h3> 
-	
-  </div>
+     <table>
+          <tr>
+            <th>City</th>
+            <th>Latitude | Longitude</th>
+            <th>DT</th>
+            <th>Temperature (F&deg;)</th>
+            <th>Humidity</th>
+            <th>Visibility</th>
+          </tr>
+          <tr>
+            <td>{data.openWeather.name}</td>
+            <td>{data.openWeather.coord.lat} | {data.openWeather.coord.lon}</td>
+            <td>{data.openWeather.dt}</td>
+            <td>{data.openWeather.main.temp}</td>
+            <td>{data.openWeather.main.humidity}%</td>
+            <td>{data.openWeather.visibility}</td>
+          </tr>
+        </table>
+    </div>
     )}
   />
-    )
+)

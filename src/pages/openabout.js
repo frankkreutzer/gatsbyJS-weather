@@ -4,9 +4,9 @@ import Layout from "../components/openlayout"
 
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1> 
+    <h1>OpenWeather Weather Data</h1> 
     <p>
-      Using OpenWeather as the weather data source.
+      <i>*Using OpenWeather as the weather data source.</i>
     </p>
   </Layout>
 )

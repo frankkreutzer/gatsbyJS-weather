@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/darklayout"
+import Header from "../components/header"
 
 export const query = graphql`
   query {
@@ -14,9 +15,9 @@ export const query = graphql`
 
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1> 
+    <Header headerText="DarkSky Weather Data" />    
     <p>
-      Using DarkSky as the weather data source.
+      <i>*Using DarkSky as the weather data source.</i>
     </p>
   </Layout>
 )
