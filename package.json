@@ -17,8 +17,10 @@
     "gatsby-plugin-offline": "^3.0.18",
     "gatsby-source-darksky": "^1.2.0",
     "gatsby-source-openweathermap": "^1.0.4",
+    "lodash": "4.17.12",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "yarn": "^1.21.0"
   },
   "repository": {
     "type": "git",
